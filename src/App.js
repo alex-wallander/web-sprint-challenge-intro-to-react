@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import { BASE_URL } from './constants/secret';
+import Character from './components/Character';
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -23,10 +24,11 @@ const App = () => {
       console.log(err);
     })
   }
-  
+
   return (
     <div className="App">
       <h1 className="React Wars >"> </h1>
+      <Character details={getData}/>
 
     </div>
   );
