@@ -21,6 +21,7 @@ const CharStyling = styled.div `
 
  const NameStyling = styled.h2`
  padding:20px;
+ margin: unset;
  `;
 const BirthStyling = styled.h3`
     margin-right: 15%;
@@ -31,6 +32,5 @@ const BirthStyling = styled.h3`
     padding-left: 8px;
     background-color: gray;
     color: purple;
-    margin-top: 6.5%;
     margin-bottom: auto;
 `;
