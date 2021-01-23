@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import axios from 'axios';
 import { BASE_URL } from './constants/secret';
@@ -13,22 +13,26 @@ const App = () => {
   // sync up with, if any.
 
   const [details, setDetails] = useState([])
-  const getData = () => {
+  
+  useEffect(() => {
     axios
     .get(`${BASE_URL}`)
     .then((res) => {
-      setDetails(res.data);
-      console.log(res.data)
+      console.log(res.data.results);
+      setDetails(res.data.results);
     })
     .catch((err) => {
       console.log(err);
     })
-  }
+  }, [])
 
   return (
     <div className="App">
-      <h1 className="React Wars >"> </h1>
-      <Character details={getData}/>
+      <h1 className="reactwars"> React Wars </h1>
+      {details.map((cr) => 
+        <Character key={cr.name} details={cr}/>
+      )}
+      
 
     </div>
   );
