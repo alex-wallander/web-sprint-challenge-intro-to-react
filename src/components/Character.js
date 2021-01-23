@@ -23,14 +23,14 @@ const CharStyling = styled.div `
  padding:20px;
  `;
 const BirthStyling = styled.h3`
-    text-align: right;
     margin-right: 15%;
     padding-top: 5px;
     border: 1px solid gray;
     border-radius: 25px;
     padding-right: 8px;
     padding-left: 8px;
-    padding-top: 4%;
     background-color: gray;
     color: purple;
+    margin-top: 6.5%;
+    margin-bottom: auto;
 `;
